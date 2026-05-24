@@ -17,7 +17,10 @@ import work.daqian.ai.chat.DefaultChatModel;
 import work.daqian.ai.history.ChatHistory;
 import work.daqian.ai.history.InMemoryChatHistory;
 import work.daqian.ai.properties.LdqAiProperties;
-import work.daqian.ai.rag.*;
+import work.daqian.ai.rag.DefaultEmbeddingModel;
+import work.daqian.ai.rag.EmbeddingModel;
+import work.daqian.ai.rag.TextSplitter;
+import work.daqian.ai.rag.VectorStore;
 
 import java.util.List;
 

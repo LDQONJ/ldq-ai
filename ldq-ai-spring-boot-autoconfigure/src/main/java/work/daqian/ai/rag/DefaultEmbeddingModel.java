@@ -3,8 +3,8 @@ package work.daqian.ai.rag;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import work.daqian.ai.api.ModelApi;
-import work.daqian.ai.properties.LdqAiProperties;
 import work.daqian.ai.enums.Provider;
+import work.daqian.ai.properties.LdqAiProperties;
 
 import java.util.HashMap;
 import java.util.List;

@@ -2,7 +2,6 @@ package work.daqian.ai.rag;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * 文本分割器
@@ -10,11 +9,11 @@ import java.util.UUID;
 public class TextSplitter {
 
     /**
-     * 分割文本
-     * @param text 原文本
+     * 分割文档
+     * @param document 原文档
      * @param chunkSize 分割后每一块的字符数
      * @param overlap 重叠的字符数
-     * @return 分割后的分本列表
+     * @return 分割后的文档列表
      */
     public List<Document> split(Document document, int chunkSize, int overlap) {
         String text = document.getContent();
