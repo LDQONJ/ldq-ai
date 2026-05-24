@@ -1,0 +1,7 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  work.daqian.ai.autoconfigure.LdqAiAutoConfiguration,\
+  work.daqian.ai.autoconfigure.history.RedisHistoryAutoConfiguration,\
+  work.daqian.ai.autoconfigure.history.MongoHistoryAutoConfiguration,\
+  work.daqian.ai.autoconfigure.history.JdbcHistoryAutoConfiguration,\
+  work.daqian.ai.autoconfigure.rag.RagEsAutoConfiguration,\
+  work.daqian.ai.autoconfigure.rag.RagRedisAutoConfiguration

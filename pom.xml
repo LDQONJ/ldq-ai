@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>work.daqian.ai</groupId>
+	<artifactId>ldq-ai</artifactId>
+	<version>${ldq-ai.version}</version>
+
+	<packaging>pom</packaging>
+
+	<properties>
+		<spring-boot.version>2.7.18</spring-boot.version>
+		<java.version>8</java.version>
+		<ldq-ai.version>1.0.0</ldq-ai.version>
+	</properties>
+
+	<modules>
+		<module>ldq-ai-core</module>
+		<module>ldq-ai-spring-boot-starter</module>
+		<module>ldq-ai-spring-boot-autoconfigure</module>
+		<module>ldq-ai-history-redis-spring-boot-starter</module>
+		<module>ldq-ai-history-mongo-spring-boot-starter</module>
+		<module>ldq-ai-history-jdbc-spring-boot-starter</module>
+		<module>ldq-ai-rag-es-spring-boot-starter</module>
+		<module>ldq-ai-rag-redis-spring-boot-starter</module>
+		<module>ldq-ai-example</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.18.32</version>
+				<optional>true</optional>
+			</dependency>
+			<dependency>
+				<groupId>org.elasticsearch.client</groupId>
+				<artifactId>elasticsearch-rest-client</artifactId>
+				<version>8.13.4</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>UTF-8</encoding>
+					<compilerArgs>
+						<compilerArg>-parameters</compilerArg>
+					</compilerArgs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

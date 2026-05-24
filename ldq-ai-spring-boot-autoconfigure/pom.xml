@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>work.daqian.ai</groupId>
+		<artifactId>ldq-ai</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>ldq-ai-spring-boot-autoconfigure</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>work.daqian.ai</groupId>
+			<artifactId>ldq-ai-core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>work.daqian.ai</groupId>
+			<artifactId>ldq-ai-history-redis-spring-boot-starter</artifactId>
+			<version>1.0.0</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>work.daqian.ai</groupId>
+			<artifactId>ldq-ai-history-mongo-spring-boot-starter</artifactId>
+			<version>1.0.0</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>work.daqian.ai</groupId>
+			<artifactId>ldq-ai-history-jdbc-spring-boot-starter</artifactId>
+			<version>1.0.0</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>work.daqian.ai</groupId>
+			<artifactId>ldq-ai-rag-es-spring-boot-starter</artifactId>
+			<version>1.0.0</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>work.daqian.ai</groupId>
+			<artifactId>ldq-ai-rag-redis-spring-boot-starter</artifactId>
+			<version>1.0.0</version>
+			<optional>true</optional>
+		</dependency>
+		<!-- WebFlux -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+	</dependencies>
+</project>
