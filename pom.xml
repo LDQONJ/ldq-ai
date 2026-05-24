@@ -7,8 +7,31 @@
 	<groupId>work.daqian.ai</groupId>
 	<artifactId>ldq-ai</artifactId>
 	<version>${ldq-ai.version}</version>
-
 	<packaging>pom</packaging>
+
+	<name>LDQ AI Project Parent</name>
+	<description>Parent POM for LDQ AI Project</description>
+	<url>https://github.com/LDQONJ/ldq-ai</url>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>LDQ</name>
+			<email>ldq4784@gmail.com</email>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/LDQONJ/ldq-ai.git</connection>
+		<developerConnection>scm:git:ssh://github.com:LDQONJ/ldq-ai.git</developerConnection>
+		<url>https://github.com/LDQONJ/ldq-ai</url>
+	</scm>
 
 	<properties>
 		<spring-boot.version>2.7.18</spring-boot.version>
@@ -66,6 +89,29 @@
 						<compilerArg>-parameters</compilerArg>
 					</compilerArgs>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.central</groupId>
+				<artifactId>central-publishing-maven-plugin</artifactId>
+				<version>0.10.0</version>
+				<extensions>true</extensions>
+				<configuration>
+					<publishingServerId>central</publishingServerId>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>3.2.8</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
