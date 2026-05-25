@@ -72,7 +72,7 @@ public class DefaultChatModel implements ChatModel {
         return new StreamResponse(chatFlux, contentMono, thinkingMono);
     }
 
-    public TextResponse call(List<Message> messages, List<FunctionCallback> tools, boolean think) {
+    public TextResponse call(List<Message> messages, List<FunctionCallback> tools, boolean enableThinking) {
         String model = ldqAiProperties.getChat().getModel();
         Provider provider = ldqAiProperties.getChat().getProvider();
         ModelApi modelApi = modelAdapterMap.get(provider);
@@ -81,7 +81,7 @@ public class DefaultChatModel implements ChatModel {
                 messages,
                 tools,
                 false,
-                think,
+                enableThinking,
                 false
         );
         DebugUtil.debugRequest(request);

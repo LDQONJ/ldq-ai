@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * 聊天历史接口
+ * @author LDQ
  */
 public interface ChatHistory {
 
@@ -18,13 +19,15 @@ public interface ChatHistory {
     List<Message> get(String conversationId, int lastN);
 
     /**
-     * 向指定会话追加一条消息
-     *
+     * 向指定会话中添加一组消息
+     * @param conversationId 对话 id
+     * @param messages 消息列表
      */
     void add(String conversationId, List<Message> messages);
 
     /**
-     * 清空某个会话
+     * 清空会话
+     * @param conversationId 对话 id
      */
     void clear(String conversationId);
 }

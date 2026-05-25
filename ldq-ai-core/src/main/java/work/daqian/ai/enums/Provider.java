@@ -2,6 +2,9 @@ package work.daqian.ai.enums;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
+/**
+ * 模型供应商
+ */
 public enum Provider {
     OLLAMA(1, "本地Ollama模型"),
     RESTRICT(2, "限制模型"),

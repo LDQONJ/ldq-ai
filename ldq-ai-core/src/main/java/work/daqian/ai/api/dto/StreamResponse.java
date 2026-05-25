@@ -7,7 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
-
+/**
+ * 流式调用完整响应
+ * @author LDQ
+ */
 public class StreamResponse {
     /**
      * 实时流式输出

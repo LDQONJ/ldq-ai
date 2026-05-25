@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 文本分割器
+ * 文档分割器
+ * @author LDQ
  */
 public class TextSplitter {
 

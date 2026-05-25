@@ -11,6 +11,8 @@
 	</parent>
 
 	<artifactId>ldq-ai-spring-boot-autoconfigure</artifactId>
+	<name>${artifactId}</name>
+	<description>LDQ AI Auto Configuration</description>
 
 	<dependencies>
 		<dependency>

@@ -40,7 +40,8 @@ public interface FunctionCallback {
 
     /**
      * 执行工具的逻辑
-     * @param arguments 工具调用参数
+     * @param argumentsJson 工具调用参数
+     * @param toolContext 工具上下文参数
      * @return 工具调用结果
      */
     String call(String argumentsJson, Map<String, Object> toolContext);

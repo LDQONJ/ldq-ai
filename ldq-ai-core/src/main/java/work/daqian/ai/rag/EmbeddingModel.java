@@ -2,6 +2,10 @@ package work.daqian.ai.rag;
 
 import java.util.List;
 
+/**
+ * 向量模型接口
+ * @author LDQ
+ */
 public interface EmbeddingModel {
     /**
      * 批量将文本向量化

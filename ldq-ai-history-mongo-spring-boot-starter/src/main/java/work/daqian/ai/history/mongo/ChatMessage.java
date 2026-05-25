@@ -9,23 +9,43 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * 消息实体类
+ */
 @Document("chat_message")
 public class ChatMessage {
+    /**
+     * 主键 id
+     */
     @Id
     private String id;
-
+    /**
+     * 对话 id
+     */
     private String conversationId;
-
+    /**
+     * 消息角色
+     */
     private String role;
-
+    /**
+     * 消息内容
+     */
     private String content;
-
+    /**
+     * 思考内容
+     */
     private String reasoningContent;
-
+    /**
+     * 工具调用请求
+     */
     private List<ToolCall> toolCalls;
-
+    /**
+     * 工具调用唯一 id
+     */
     private String toolCallId;
-
+    /**
+     * 创建时间
+     */
     @CreatedDate
     private LocalDateTime createTime;
 

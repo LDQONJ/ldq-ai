@@ -6,6 +6,10 @@ import work.daqian.ai.enums.Provider;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * LDQ AI 配置属性类
+ * @author LDQ
+ */
 @ConfigurationProperties(prefix = "ldq-ai")
 public class LdqAiProperties {
 
@@ -102,15 +106,22 @@ public class LdqAiProperties {
 
     public static class OpenAI {
         /**
-         * OpenAI 兼容接口 URL
+         * OpenAI 兼容 API URL
          */
         private String baseUrl = "";
-
+        /**
+         * API 请求头
+         */
         private List<Header> headers = new ArrayList<>();
 
         public static class Header {
+            /**
+             * 请求头名称
+             */
             private String headerName;
-
+            /**
+             * 请求头内容
+             */
             private String headerValue;
 
             public String getHeaderName() {
@@ -149,11 +160,11 @@ public class LdqAiProperties {
 
     public static class Embedding {
         /**
-         * 模型名称
+         * 向量模型名称
          */
         private String model = "qwen3-embedding:4b-q8_0";
         /**
-         * 模型供应商
+         * 向量模型供应商
          */
         private Provider provider = Provider.OLLAMA;
 

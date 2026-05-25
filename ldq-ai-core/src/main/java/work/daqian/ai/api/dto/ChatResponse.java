@@ -2,8 +2,6 @@ package work.daqian.ai.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonRawValue;
 
-import java.util.Objects;
-
 /**
  * ldq-ai 模型调用流式响应 chunk 类
  */
@@ -42,26 +40,6 @@ public class ChatResponse {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        ChatResponse that = (ChatResponse) o;
-        return Objects.equals(type, that.type) && Objects.equals(content, that.content);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(type, content);
-    }
-
-    @Override
-    public String toString() {
-        return "ChatResponse{" +
-                "type='" + type + '\'' +
-                ", content='" + content + '\'' +
-                '}';
     }
 
     public static class Usage {
